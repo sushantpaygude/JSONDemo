@@ -1,5 +1,7 @@
 package com.example.android.quakereport;
 
+import java.util.Locale;
+
 /**
  * Created by sushant on 7/9/16.
  */
@@ -39,5 +41,10 @@ public class Earthquake {
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(Locale.ENGLISH,"%s R.S at %s on DATE",this.getMagnitude(),this.getPlace());
     }
 }
